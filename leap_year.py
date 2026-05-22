@@ -1,3 +1,7 @@
+'''
+Write a program to find the year is leap year or not
+'''
+
 year = int(input("Enter a year : "))
 if year % 4 == 0 :
     print("Yes!, it's a leap year.")
