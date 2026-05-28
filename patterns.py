@@ -207,7 +207,7 @@ num = int(input("Enter a number : "))
 
 #OR
 
-##Gives exact output for odd numbers only
+# ##Gives exact output for odd numbers only
 # for i in range(1, num+1) :
 #     for j in range(1, num+1) :
 #         if i==j or i+j == num+1 :
@@ -215,3 +215,28 @@ num = int(input("Enter a number : "))
 #         else :
 #             print(" ", end=" ")
 #     print()
+
+
+# ##Pallindrome number pyramid
+# for i in range(1, num+1) :
+#     print("  "*(num-i), end=" ")
+#     for j in range(1, i+1) :
+#         print(j, end=" ")
+#     for j in range(i-1, 0, -1) :
+#         print(j, end=" ")
+#     print()
+
+
+# ##pallindrome Alphabet pyramid
+# for i in range(1, num+1) :
+#     print("  "*(num-i), end=" ")
+#     k = 65
+#     for j in range(1, i+1) :
+#         print(chr(k), end=" ")
+#         k += 1
+#     for j in range(i-1, 0, -1) :
+#         print(chr(k-2), end=" ")
+#         k -= 1
+#     print()
+
+
