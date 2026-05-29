@@ -86,7 +86,94 @@ keeps summing the digits of a number until the result is a single digit. Example
 Collatz sequence
 Start with any positive interger N. If even, divide by 2; if odd, multiply by 3 and add 1. Repeat until you reach 1. Print the sequence length.
 '''
+# num = int(input("Enter a number : "))
+# temp = num
+# count = []
+
+# while temp != 1 :
+#     # print(temp)
+#     count.append(temp)
+#     if temp % 2 == 0:
+#         result = temp // 2
+#     else :
+#         result = (temp * 3) + 1
+#     temp = result
+# count.append(temp)
+# print(count)
 
 '''
+Generate the first 20 terms of the fibonacci sequence using a loop. Store them in a list and then print the list. Also print the sum of all even-valued terms in the sequence.
+'''
+# n1 = 0
+# n2 = 1
+# result = []
+# for i in range(20) :
+#     result.append(n1)   #It prints the fibonacci sequence
+#     n3 = n1 + n2
+#     n1, n2 = n2, n3
+# sum = 0
+# arr = []
+# for i in range(len(result)) :
+#     if result[i] % 2 == 0 :
+#         sum += result[i]    #It prints the sum of the even fibonacci sequence
+#         arr.append(result[i])   #It prints the even fibonacci sequence
+# print(arr)
+# print(sum)
+
 
 '''
+The manager wants to identify all unique groups of three departments where the final net result is zero. This means the profit and loss values balance each other perfectly
+WAP to find all unique triplets from the list whose sum is 0.
+'''
+
+# arr = [2, 0, -2, 3, -6, -3, -1, -2]
+# res = []
+
+# for i in range(len(arr)) :
+#     for j in range(i+1, len(arr)) :
+#         for k in range(j+1, len(arr)) :
+#             if arr[i]+arr[j]+arr[k] == 0 :
+#                 coll = [arr[i], arr[j], arr[k]]
+#                 coll.sort()
+#                 if coll not in res :
+#                     res.append(coll)
+# print(res)
+
+
+
+
+# list = eval(input("Enter a list : "))
+# target = int(input("Enter a number : "))
+# res = []
+# for i in range(len(list)) :
+#     for j in range(i+1, len(list)) :
+#         if list[i]+list[j] == target :
+#             coll = [list[i], list[j]]
+#             # coll.sort()
+#             res.append(coll)
+
+#OR
+
+# for i in list :
+#     if target-i in list :
+#         coll = [i, target-i]
+#         coll.sort()
+#         if coll not in res :
+#             res.append(coll)
+# print(res)
+
+
+'''
+WAP to check whether the list contains any subarray whose sum is equal to the target value. 
+'''
+list = [3, 4, -2, 5, 1, -3]
+target = 7
+res = []
+for i in list :     #This code is for only subarray which length is 2. Need to do with different length of subarrays.
+    if target-i in list :
+        coll = [i, target-i]
+        res.append(coll)
+        if (i+target-i) == target :
+            print("True")
+            break
+print(res)
