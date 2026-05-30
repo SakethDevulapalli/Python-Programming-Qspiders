@@ -166,14 +166,99 @@ WAP to find all unique triplets from the list whose sum is 0.
 '''
 WAP to check whether the list contains any subarray whose sum is equal to the target value. 
 '''
-list = [3, 4, -2, 5, 1, -3]
-target = 7
-res = []
-for i in list :     #This code is for only subarray which length is 2. Need to do with different length of subarrays.
-    if target-i in list :
-        coll = [i, target-i]
-        res.append(coll)
-        if (i+target-i) == target :
-            print("True")
-            break
-print(res)
+# list = [3, 4, -2, 5, 1, -3]
+# target = 7
+# res = []
+# for i in list :     #This code is for only subarray which length is 2. Need to do with different length of subarrays.
+#     if target-i in list :
+#         coll = [i, target-i]
+#         res.append(coll)
+#         if (i+target-i) == target :
+#             print("True")
+#             break
+# print(res)
+
+#OR
+
+# list = [3, 4, -2, 5, 1, -3]
+# target = 7
+# flag = False
+# for i in range(len(list)) :
+#     sum = 0
+#     sum += list[i]
+#     for j in range(i+1, len(list)) :
+#         sum += list[j]
+#         if sum == target :
+#             flag = True
+#             break
+# print(flag)
+
+
+'''
+Given a list of numbers. Create another list having len as 3 where 1st elements is the sum of prime numbers present, second element is the no of prime numbers and third element is the no. of composite numbers.
+'''
+# list = [2, 7, 9, 3, 4, 1]
+# def is_prime(num) :
+#     if num <= 1 :
+#         return False
+#     for i in range(2, num) :
+#         if num % i == 0 :
+#             return False
+#     return True
+
+# sum_prime = 0
+# count_prime = 0
+# count_comp = 0
+
+# for i in list :
+#     if is_prime(i) :
+#         sum_prime += i
+#         count_prime += 1
+#     else :
+#         if i == 1 :
+#             continue
+#         else :
+#             count_comp += 1
+# result = [sum_prime, count_prime, count_comp]
+# print(result)
+
+
+'''
+A company gives performance points to employees.
+The HR manager wants to identify all employee pairs where one employee is points exactly double the other employee's score.
+WAP to find all such pairs from the list.
+'''
+# score = [2, 4, 6, 8, 3, 12]
+# res = []
+# for i in score :
+#     d = i*2
+#     if d in score :
+#         pair = [i, d]
+#         pair.sort()
+#         if pair not in res :
+#             res.append(pair)
+# print(res)
+
+
+'''
+WAP to find the kth rotation of a list
+'''
+# list = [1, 2, 3, 4, 5]
+# rotation = int(input("Enter a number for rotation : "))
+# for i in range(rotation) :
+#     el = list.pop()
+#     list.insert(0, el)
+#     print(list)
+
+
+'''
+A company stores product codes as strings.
+Sometimes the same code is entered in rotated form
+
+ex: "ABCD" rotated becomes "BCDA"
+    "ABCD" rotated becomes "CDAB
+
+The manager wants to find all pairs of strings where one string is a rotation of another.
+Write a python program to find all such pairs.
+'''
+
