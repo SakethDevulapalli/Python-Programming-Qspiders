@@ -262,3 +262,127 @@ The manager wants to find all pairs of strings where one string is a rotation of
 Write a python program to find all such pairs.
 '''
 
+'''
+Rock Paper Scissor for five rounds
+'''
+
+
+'''
+Armstrong Number
+'''
+# num = int(input("Enter a number : "))
+# def is_armstrong(num):
+#     result = 0
+#     while num != 0 :
+#         digit = num % 10
+#         new_num = digit * digit * digit
+#         result = (result * 10) + new_num
+#         num //= 10
+    
+#     return if True result == num else False
+# print(is_armstrong(num))      #needed to correct
+
+
+'''
+Neon Number
+Write a function is_neon() that checks if a number is a neon number(sum of digits of its square equals the number itself)
+'''
+# num = int(input("Enter a number : "))
+# def neon_number(num) :
+#     result = 0
+#     while num != 0 :
+#         result += (num%10) ** 2
+#         num //= 10
+#     return True if num == result else False
+# print(neon_number(num))       #needed to correct
+
+
+'''
+Write a function is_spy() that checks if a number is a spy number (sum of digits equals product of digits)
+'''
+# num = int(input("Enter a number : "))
+# def is_spy(num) :
+#     temp = num
+#     sum = 0
+#     prod = 1
+#     while temp != 0 :
+#         sum += temp % 10
+#         prod *= temp % 10
+#         temp //= 10
+#     return sum == prod
+# print(is_spy(num))
+
+
+
+'''
+WAF is_duck() that checks if a number is a duck number(contains at least one zero, but does not start with zero)
+'''
+# num = input("Enter a number : ")
+# def is_duck(num):
+#     digits = num
+#     if '0' in digits and digits[0] != 0:
+#         print(True)
+#     else :
+#         print(False)
+# is_duck(num)
+
+
+
+'''
+WAF is_magic() that checks if a number is a magic number(recursively summing digits until single digits results in 1)
+'''
+# num = int(input("Enter a number : "))
+# def is_magic(num):
+#     while num >= 10 :
+#         result = 0
+#         while num != 0 :
+#             result += num % 10
+#             num //= 10
+#         num = result
+#     return True if result == 1 else False
+# print(is_magic(num))
+
+
+'''
+WAF is_palindrome
+'''
+# num = int(input("Enter a number : "))
+# def is_palindrome(num):
+#     result = 0
+#     while num != 0:
+#         new_num = num % 10
+#         result = result * 10 + new_num
+#         num //= 10
+#         print(result)
+#     return True if num == result else False
+# print(is_palindrome(num))     #needed to correct
+
+
+
+'''
+WAF is_automorphic()
+'''
+num = int(input("Enter a number : "))
+# def is_automorphic(num):
+#     new_num = num * num
+#     print(new_num)
+#     power = len(str(num))
+#     if (new_num % (10 ** power) == num):
+#         print(True)
+#     else:
+#         print(False)
+
+#OR
+
+# def is_automorphic(num):
+#     sqr = num * num
+#     # print(sqr)
+#     power = 0
+#     while num != 0:
+#         power += 1
+#         num //= 10
+#     new_number = sqr % (10 ** power)
+#     # print(new_number)
+#     return num == new_number      #needed to correct
+
+print(is_automorphic(num))
